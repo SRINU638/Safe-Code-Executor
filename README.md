@@ -161,6 +161,9 @@ curl -s -X POST http://127.0.0.1:5000/run \
 }
 ```
 
+![ERROR10 Screenshot](screenshots/ERROR10.png)
+
+
 ---
 
 #  4. Security Features Implemented
