@@ -204,6 +204,9 @@ curl -s -X POST http://127.0.0.1:5000/run \
  -H "Content-Type: application/json" \
  -d '{"code":"while True:\n    pass"}' | jq
 ```
+![Error 10 Screenshot](screenshots/ERROR10.png)
+
+
 
 Expected:
 `Execution timed out after 10 seconds`
@@ -237,6 +240,9 @@ curl -s -X POST http://127.0.0.1:5000/run \
 Expected:
 DNS error (network disabled).
 
+![Print Screenshot](screenshots/primt.png)
+
+
 ---
 
 ###  Test 5 — Write to File System (Should Fail)
@@ -246,6 +252,9 @@ curl -s -X POST http://127.0.0.1:5000/run \
  -H "Content-Type: application/json" \
  -d '{"code":"open(\"/etc/passwd\").read()"}'
 ```
+
+![PASS Screenshot](screenshots/PASS.png)
+
 
 ---
 
