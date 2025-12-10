@@ -281,36 +281,10 @@ Now writing gives:
 
 ---
 
-#  7. Report Template (Task 4)
-
-Create a file `REPORT.md`:
-
-```
-# Docker Sandbox Security — Experiment Report
-
-## What Worked
-- Basic Python execution
-- Memory limits enforced (OOM)
-- Timeout stops infinite loops
-- Network blocked correctly
-- Containers clean up after execution
-
-## What Failed or Was Prevented
-- Outbound network calls (blocked)
-- Writing to read-only filesystem
-- Infinite loops (timeout)
-- Large memory allocations (OOM kill)
-
-## What I Learned
-- Docker provides good isolation but is not a perfect security boundary.
-- `--network none`, `--memory`, and `--pids-limit` are essential.
-- `--read-only` prevents filesystem changes.
-- Host files are safe unless explicitly mounted.
-```
 
 ---
 
-#  8. Web UI (Optional)
+#  7. Web UI (Optional)
 
 Open:
 
@@ -326,7 +300,7 @@ http://127.0.0.1:5000/ui
 
 ---
 
-#  9. Troubleshooting
+#  8. Troubleshooting
 
 ###  `500 Internal Server Error`
 
