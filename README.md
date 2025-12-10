@@ -97,7 +97,7 @@ docker ps
 
 ```bash
 python app.py
-```
+``
 
 Server will run at:
 
@@ -105,7 +105,8 @@ Server will run at:
 http://127.0.0.1:5000
 ```
 
-![Screenshot 28](screenshots/Screenshot (28).png)
+![Screenshot 28](screenshots/Screenshot%20(28).png)
+
 
 ---
 
