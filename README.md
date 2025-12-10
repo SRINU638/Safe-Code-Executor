@@ -1,8 +1,8 @@
-Here is a **clean, complete, production-ready README.md** you can directly paste into your GitHub project.
+
 
 ---
 
-# 🛡️ Safe Python Code Executor
+#  Safe Python Code Executor
 
 Run untrusted Python code safely using **Docker sandboxing**, **timeouts**, **network isolation**, and **resource limits**.
 
@@ -10,29 +10,29 @@ This project exposes a simple **REST API**, executes Python snippets inside a co
 
 ---
 
-# 🚀 Features
+#  Features
 
-### ✔ Executes any Python code in a Docker container
+###  Executes any Python code in a Docker container
 
-### ✔ 10-second timeout (stops infinite loops)
+###  10-second timeout (stops infinite loops)
 
-### ✔ Prevents network access (`--network none`)
+###  Prevents network access (`--network none`)
 
-### ✔ Memory limit (`--memory 128m`)
+###  Memory limit (`--memory 128m`)
 
-### ✔ CPU limit (`--cpus=1`)
+###  CPU limit (`--cpus=1`)
 
-### ✔ PIDs limit (`--pids-limit=64`)
+###  PIDs limit (`--pids-limit=64`)
 
-### ✔ Prevents writing to host (`:ro` mounts + optional `--read-only`)
+###  Prevents writing to host (`:ro` mounts + optional `--read-only`)
 
-### ✔ Web UI with textarea & Run button
+###  Web UI with textarea & Run button
 
-### ✔ Clear error messages (timeout, OOM, exceptions)
+###  Clear error messages (timeout, OOM, exceptions)
 
 ---
 
-# 📁 Project Structure
+#  Project Structure
 
 ```
 safe_code_executor/
@@ -47,7 +47,7 @@ safe_code_executor/
 
 ---
 
-# ⚙️ 1. Prerequisites
+#  1. Prerequisites
 
 * Python 3.8+
 * Docker Desktop running (WSL2 if on Windows)
@@ -56,7 +56,7 @@ safe_code_executor/
 
 ---
 
-# 🏁 2. Setup — Step by Step
+#  2. Setup — Step by Step
 
 Open **WSL/Ubuntu terminal**:
 
@@ -107,7 +107,7 @@ http://127.0.0.1:5000
 
 ---
 
-# 🔌 3. API Usage
+#  3. API Usage
 
 ## **POST /run**
 
@@ -158,7 +158,7 @@ curl -s -X POST http://127.0.0.1:5000/run \
 
 ---
 
-# 🛡️ 4. Security Features Implemented
+#  4. Security Features Implemented
 
 | Security Layer                 | Description                                  |
 | ------------------------------ | -------------------------------------------- |
@@ -173,13 +173,13 @@ curl -s -X POST http://127.0.0.1:5000/run \
 
 ---
 
-# 🧪 5. Test Cases
+#  5. Test Cases
 
 Open a new terminal and run these.
 
 ---
 
-### ✔ Test 1 — Basic Code
+###  Test 1 — Basic Code
 
 ```bash
 curl -s -X POST http://127.0.0.1:5000/run \
@@ -189,7 +189,7 @@ curl -s -X POST http://127.0.0.1:5000/run \
 
 ---
 
-### ✔ Test 2 — Infinite Loop (Timeout)
+###  Test 2 — Infinite Loop (Timeout)
 
 ```bash
 curl -s -X POST http://127.0.0.1:5000/run \
@@ -202,7 +202,7 @@ Expected:
 
 ---
 
-### ✔ Test 3 — Memory Bomb (OOM Protection)
+###  Test 3 — Memory Bomb (OOM Protection)
 
 ```bash
 curl -s -X POST http://127.0.0.1:5000/run \
@@ -215,7 +215,7 @@ Container killed by memory limit.
 
 ---
 
-### ✔ Test 4 — Network Block
+###  Test 4 — Network Block
 
 ```bash
 curl -s -X POST http://127.0.0.1:5000/run \
@@ -228,7 +228,7 @@ DNS error (network disabled).
 
 ---
 
-### ✔ Test 5 — Write to File System (Should Fail)
+###  Test 5 — Write to File System (Should Fail)
 
 ```bash
 curl -s -X POST http://127.0.0.1:5000/run \
@@ -238,7 +238,7 @@ curl -s -X POST http://127.0.0.1:5000/run \
 
 ---
 
-# 🔬 6. Docker Security Experiments (Task 3)
+#  6. Docker Security Experiments (Task 3)
 
 ### **Experiment A — Read /etc/passwd**
 
@@ -249,8 +249,8 @@ with open("/etc/passwd") as f:
 
 Expected:
 
-✔ Shows **container’s** passwd (not the host one).
-✔ Demonstrates filesystem isolation.
+ Shows **container’s** passwd (not the host one).
+ Demonstrates filesystem isolation.
 
 ---
 
@@ -263,7 +263,7 @@ with open("/tmp/test.txt","w") as f:
 
 Expected:
 
-✔ Works normally (**unless `--read-only` enabled**)
+ Works normally (**unless `--read-only` enabled**)
 
 ---
 
@@ -277,11 +277,11 @@ Update docker run command:
 
 Now writing gives:
 
-❌ `OSError: Read-only file system`
+ `OSError: Read-only file system`
 
 ---
 
-# 📝 7. Report Template (Task 4)
+#  7. Report Template (Task 4)
 
 Create a file `REPORT.md`:
 
@@ -310,7 +310,7 @@ Create a file `REPORT.md`:
 
 ---
 
-# 🌐 8. Web UI (Optional)
+#  8. Web UI (Optional)
 
 Open:
 
@@ -326,9 +326,9 @@ http://127.0.0.1:5000/ui
 
 ---
 
-# 🧯 9. Troubleshooting
+#  9. Troubleshooting
 
-### ❌ `500 Internal Server Error`
+###  `500 Internal Server Error`
 
 Causes:
 
@@ -336,11 +336,11 @@ Causes:
 * Docker not running
 * `tmp/` missing → create with `mkdir tmp`
 
-### ❌ `FileNotFoundError: docker`
+###  `FileNotFoundError: docker`
 
 Run Docker Desktop → enable WSL2 integration.
 
-### ❌ Container does not remove after timeout
+###  Container does not remove after timeout
 
 Manually remove:
 
@@ -350,7 +350,7 @@ docker rm -f safe_executor_<timestamp>
 
 ---
 
-# 📌 10. Next Improvements
+#  10. Next Improvements
 
 * Add seccomp profiles
 * Use gVisor/Kata Containers
@@ -360,15 +360,3 @@ docker rm -f safe_executor_<timestamp>
 * Execute in Firecracker VM for real isolation
 
 ---
-
-# ✅ Project Completed
-
-This README is production-ready and includes everything required for **your assignment, documentation task, and practical experiment report**.
-
-If you want, I can also generate:
-
-📦 **ZIP file with all project files**
-📄 **Complete REPORT.md with your real outputs**
-📝 **Detailed Dockerfile with coreutils (timeout) included**
-
-Just tell me **“give me full project zip”** or **“generate REPORT.md”**.
