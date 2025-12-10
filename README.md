@@ -350,13 +350,4 @@ docker rm -f safe_executor_<timestamp>
 
 ---
 
-#  10. Next Improvements
 
-* Add seccomp profiles
-* Use gVisor/Kata Containers
-* Implement rate limiting
-* Add persistent logs (Mongo/Postgres)
-* Queue workers for scaling
-* Execute in Firecracker VM for real isolation
-
----
