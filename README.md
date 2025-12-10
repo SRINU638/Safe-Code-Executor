@@ -213,6 +213,9 @@ curl -s -X POST http://127.0.0.1:5000/run \
 Expected:
 Container killed by memory limit.
 
+![Error Screenshot](screenshots/ERROR.png)
+
+
 ---
 
 ###  Test 4 — Network Block
