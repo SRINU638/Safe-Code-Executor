@@ -250,6 +250,8 @@ curl -s -X POST http://127.0.0.1:5000/run \
 Expected:
 DNS error (network disabled).
 
+![example](./screenshots/example.png)
+
 ---
 
 ###  Test 5 — Write to File System (Should Fail)
