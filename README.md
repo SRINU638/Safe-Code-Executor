@@ -346,5 +346,23 @@ docker rm -f safe_executor_<timestamp>
 ```
 
 ---
+# Conclusion
 
+The Safe Code Executor project demonstrates a secure and robust way to execute user-submitted code. By leveraging isolation, resource limits, and error handling, it ensures safety, reliability, and efficiency. The project provides a strong foundation for understanding sandboxed execution and secure software development practices.
+
+# Learning Outcomes
+
+Understanding sandboxing and secure code execution
+
+Handling multi-language code safely
+
+Implementing resource control (CPU, memory, execution time)
+
+Capturing output and errors programmatically
+
+Managing temporary files and directories securely
+
+Applying Git and version control best practices
+
+Developing secure and robust software for real-world applications
 
