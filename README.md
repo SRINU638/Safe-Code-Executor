@@ -105,6 +105,8 @@ Server will run at:
 http://127.0.0.1:5000
 ```
 
+![Screenshot 28](screenshots/Screenshot (28).png)
+
 ---
 
 #  3. API Usage
@@ -120,6 +122,9 @@ Execute Python code inside a Docker sandbox.
   "code": "print(2+2)"
 }
 ```
+
+![Output 4](screenshots/OUTPUT 4.png)
+
 
 ### Example (curl)
 
