@@ -187,6 +187,9 @@ curl -s -X POST http://127.0.0.1:5000/run \
  -d '{"code":"print(\"Hello World\")"}' | jq
 ```
 
+![Hello Screenshot](screenshots/hello.png)
+
+
 ---
 
 ###  Test 2 — Infinite Loop (Timeout)
