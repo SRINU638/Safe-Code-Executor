@@ -97,34 +97,32 @@ docker ps
 
 ```bash
 python app.py
-``
+
+```
 
 Server will run at:
 
-```
 http://127.0.0.1:5000
-```
 
 ![Screenshot 28](screenshots/Screenshot%20(28).png)
 
+# 3. API Usage
 
----
-
-#  3. API Usage
-
-## **POST /run**
+### POST /run
 
 Execute Python code inside a Docker sandbox.
 
 ### Request
 
-```json
+```
 {
   "code": "print(2+2)"
 }
+
 ```
 
-![Output 4](screenshots/OUTPUT 4.png)
+![OUTPUT 4](screenshots/OUTPUT%204.png)
+
 
 
 ### Example (curl)
@@ -252,7 +250,7 @@ curl -s -X POST http://127.0.0.1:5000/run \
 Expected:
 DNS error (network disabled).
 
-![Print Screenshot](screenshots/primt.png)
+![example image](screenshots/example.png)
 
 
 ---
